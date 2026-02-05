@@ -51,18 +51,18 @@
             font-size: 16px;
         }
         p {
-            line-height: 1.75;
+            line-height: 1.625;
             font-size: 16px;
         }
         .lead-text {
-            font-size: 20px;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.625;
             font-weight: 400;
             color: var(--brand-gray-700);
         }
         .subhead-text {
-            font-size: 18px;
-            line-height: 1.65;
+            font-size: 16px;
+            line-height: 1.625;
             font-weight: 400;
             color: var(--brand-gray-700);
         }
@@ -95,14 +95,14 @@
             letter-spacing: -0.02em;
         }
         h1 {
-            font-size: 48px;
-            line-height: 1.15;
+            font-size: 30px;
+            line-height: 1.25;
             margin-bottom: 24px;
             font-weight: 800;
         }
         h2 {
-            font-size: 36px;
-            line-height: 1.25;
+            font-size: 24px;
+            line-height: 1.3;
             margin-bottom: 32px;
             font-weight: 700;
         }
@@ -119,22 +119,29 @@
             font-weight: 600;
         }
         @media (max-width: 768px) {
-            h1 {
-                font-size: 32px;
-            }
-            h2 {
-                font-size: 28px;
-            }
             h3 {
                 font-size: 20px;
+            }
+        }
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 48px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            p,
+            .lead-text,
+            .subhead-text {
+                font-size: 18px;
             }
         }
         .btn-primary {
             background: var(--brand-accent-yellow);
             color: var(--brand-navy);
             font-weight: 600;
-            padding: 14px 28px;
-            border-radius: 8px;
+            padding: 16px 24px;
+            border-radius: 12px;
             text-decoration: none;
             display: inline-block;
             border: none;
@@ -152,8 +159,8 @@
             background: var(--brand-blue);
             color: var(--brand-white);
             font-weight: 600;
-            padding: 14px 28px;
-            border-radius: 8px;
+            padding: 16px 24px;
+            border-radius: 12px;
             text-decoration: none;
             display: inline-block;
             border: none;
@@ -361,11 +368,17 @@
             color: var(--brand-accent-yellow);
         }
         .hero-subhead {
-            font-size: 24px;
+            font-size: 16px;
+            line-height: 1.625;
             color: var(--brand-white);
             margin-bottom: 32px;
             font-weight: 400;
             text-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+        @media (min-width: 768px) {
+            .hero-subhead {
+                font-size: 18px;
+            }
         }
         .hero-cta-group {
             display: flex;
@@ -1243,10 +1256,10 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Los Angeles Car Accident Lawyer<br><span class="highlight">Hurt in a Crash? Call Now.</span></h1>
-                    <p class="hero-subhead">Free case review for car accident victims. No fee unless we win.</p>
+                    <h1>Los Angeles Car Accident Lawyer – Free Consultation 24/7</h1>
+                    <p class="hero-subhead">Injured in a car accident in Los Angeles? Speak directly with experienced attorneys who understand insurance companies and fight for maximum compensation.</p>
                     <div class="hero-cta-group">
-                        <a href="tel:844-467-4335" class="btn-primary" data-callrail-phone="844-467-4335">Call Now for a Free Case Review</a>
+                        <a href="tel:844-467-4335" class="btn-primary" data-callrail-phone="844-467-4335" aria-label="Free Consultation Los Angeles Car Accident Lawyer">Call Now for a Free Case Review</a>
                         <a href="#case-evaluation" class="btn-secondary">Check My Case</a>
                     </div>
                     <div class="service-areas">
@@ -1291,6 +1304,16 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-with-bg">
+        <div class="container">
+            <div class="section-content">
+                <h2>Why Hire a Los Angeles Car Accident Lawyer?</h2>
+                <p>A los angeles car accident lawyer can protect your rights from day one, handling evidence, medical records, and insurer communications while you focus on recovery.</p>
+                <p>An experienced car accident attorney knows how to value an auto accident claim, challenge low offers, and pursue the full compensation you deserve.</p>
             </div>
         </div>
     </section>
@@ -1475,6 +1498,7 @@
             <div class="attorney-bio-content">
                 <img src="images/la/attorney-hero.webp" alt="Shawn Rokni" class="attorney-photo">
                 <div class="attorney-details">
+                    <p class="subhead-text">Meet Your Los Angeles Injury Attorney</p>
                     <h2>Meet Your Car Accident Attorney</h2>
                     <div class="attorney-name">Shawn Rokni</div>
                     <div class="attorney-title">Attorney at Law</div>
