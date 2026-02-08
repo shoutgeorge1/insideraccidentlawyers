@@ -269,15 +269,23 @@
             width: 100%;
             max-width: 160px;
         }
-        .attorney-photo {
+        .attorney-photo-wrap {
             width: 120px;
             height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #333;
+            flex-shrink: 0;
             margin: 0 auto 12px;
-            display: block;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #333;
             background: #222;
+        }
+        .attorney-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            aspect-ratio: 1;
         }
         .attorney-name {
             font-size: 15px;
@@ -379,37 +387,37 @@
         <p class="section-sub">Insider Accident Lawyers</p>
         <div class="attorneys-grid">
             <div class="attorney-card">
-                <img src="images/la/shawn-rokni-attorney.webp" alt="Shawn Rokni" class="attorney-photo" width="120" height="120" loading="lazy">
+                <div class="attorney-photo-wrap"><img src="images/la/shawn-rokni-attorney.webp" alt="Shawn Rokni" class="attorney-photo" width="120" height="120" loading="lazy"></div>
                 <div class="attorney-name">Shawn Rokni</div>
                 <div class="attorney-title">Managing Attorney</div>
             </div>
             <div class="attorney-card">
-                <img src="images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" class="attorney-photo" width="120" height="120" loading="lazy">
+                <div class="attorney-photo-wrap"><img src="images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" class="attorney-photo" width="120" height="120" loading="lazy"></div>
                 <div class="attorney-name">Harvey Goldhammer</div>
                 <div class="attorney-title">Senior Litigation Attorney</div>
             </div>
             <div class="attorney-card">
-                <img src="images/la/nathaniel-clark.png" alt="Nathaniel Clark" class="attorney-photo" width="120" height="120" loading="lazy">
+                <div class="attorney-photo-wrap"><img src="images/la/nathaniel-clark.png" alt="Nathaniel Clark" class="attorney-photo" width="120" height="120" loading="lazy"></div>
                 <div class="attorney-name">Nathaniel Clark</div>
                 <div class="attorney-title">Senior Litigation Attorney</div>
             </div>
             <div class="attorney-card">
-                <img src="images/la/edward-yim.webp" alt="Edward C. Yim" class="attorney-photo" width="120" height="120" loading="lazy">
+                <div class="attorney-photo-wrap"><img src="images/la/edward-yim.webp" alt="Edward C. Yim" class="attorney-photo" width="120" height="120" loading="lazy"></div>
                 <div class="attorney-name">Edward C. Yim</div>
                 <div class="attorney-title">Senior Litigation Attorney</div>
             </div>
             <div class="attorney-card">
-                <img src="images/la/steven-salazar.png" alt="Steven Salazar" class="attorney-photo" width="120" height="120" loading="lazy">
+                <div class="attorney-photo-wrap"><img src="images/la/steven-salazar.png" alt="Steven Salazar" class="attorney-photo" width="120" height="120" loading="lazy"></div>
                 <div class="attorney-name">Steven Salazar</div>
                 <div class="attorney-title">Associate Attorney</div>
             </div>
             <div class="attorney-card">
-                <img src="images/la/donn-christensen.webp" alt="Donn W. Christensen, Esq." class="attorney-photo" width="120" height="120" loading="lazy">
+                <div class="attorney-photo-wrap"><img src="images/la/donn-christensen.webp" alt="Donn W. Christensen, Esq." class="attorney-photo" width="120" height="120" loading="lazy"></div>
                 <div class="attorney-name">Donn W. Christensen, Esq.</div>
                 <div class="attorney-title">Managing Attorney</div>
             </div>
             <div class="attorney-card">
-                <img src="images/la/artur-mheryan.webp" alt="Artur Mheryan" class="attorney-photo" width="120" height="120" loading="lazy">
+                <div class="attorney-photo-wrap"><img src="images/la/artur-mheryan.webp" alt="Artur Mheryan" class="attorney-photo" width="120" height="120" loading="lazy"></div>
                 <div class="attorney-name">Artur Mheryan</div>
                 <div class="attorney-title">Associate Attorney</div>
             </div>
