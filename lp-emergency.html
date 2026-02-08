@@ -156,57 +156,66 @@
             color: #cccccc;
         }
         .form-group {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
         .form-label {
             display: block;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
-            margin-bottom: 8px;
-            color: #ffffff;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 480px) {
+            .form-row { grid-template-columns: 1fr; }
         }
         .form-input,
         .form-select {
             width: 100%;
-            padding: 16px;
-            border: 2px solid #333;
+            padding: 14px 16px;
+            border: 2px solid #555;
             border-radius: 8px;
-            font-size: 18px;
-            background: #1a1a1a;
-            color: #ffffff;
+            font-size: 17px;
+            background: #222;
+            color: #fff;
             font-family: "Inter", sans-serif;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        .form-input::placeholder {
+            color: #999;
         }
         .form-input:focus,
         .form-select:focus {
             outline: none;
             border-color: #ff4444;
+            background: #252525;
         }
-        .form-radio-group {
-            display: flex;
-            gap: 24px;
-            margin-top: 8px;
-        }
-        .form-radio-group label {
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-        }
-        .form-checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 8px;
+        .form-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23999' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 40px;
         }
         .form-checkbox {
             display: flex;
-            align-items: center;
-            gap: 8px;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .form-checkbox input {
+            margin-top: 4px;
+            width: 18px;
+            height: 18px;
+            accent-color: #ff4444;
         }
         .form-checkbox label {
-            font-size: 16px;
+            font-size: 14px;
             cursor: pointer;
+            color: #bbb;
         }
         .btn-submit {
             background: #ff4444;
@@ -326,111 +335,56 @@
 
     <div class="form-section">
         <h2>Get Help Now</h2>
-        <p>Fill out this form and we'll contact you immediately.</p>
+        <p>Quick form — we'll call you right back.</p>
         <form action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="https://insideraccidentlawyers.vercel.app/thank-you.html">
+            <input type="hidden" name="_next" value="https://insideraccidentlawyers.vercel.app/thank-you.html">
             <input type="hidden" name="_cc" value="john@insiderlawyers.com">
             <input type="hidden" name="_subject" value="New Lead - Personal Injury Case Evaluation">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
-            
-            <div class="form-group">
-                <label class="form-label">Are you, your victim, or are you on behalf of a friend/family member?</label>
-                <select class="form-select" name="relationship" required>
-                    <option value="">Select an option</option>
-                    <option value="self">I was injured</option>
-                    <option value="victim">I am calling on behalf of the injured person</option>
-                    <option value="family">I am calling on behalf of a family member</option>
-                    <option value="friend">I am calling on behalf of a friend</option>
-                </select>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">First name</label>
+                    <input type="text" class="form-input" name="first_name" placeholder="First name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Last name</label>
+                    <input type="text" class="form-input" name="last_name" placeholder="Last name" required>
+                </div>
             </div>
-            
+
             <div class="form-group">
-                <label class="form-label">What type of accident occurred?</label>
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-input" name="phone" placeholder="(555) 123-4567" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Type of accident</label>
                 <select class="form-select" name="accident_type" required>
-                    <option value="">Select an option</option>
-                    <option value="car">Car Accident</option>
-                    <option value="motorcycle">Motorcycle Accident</option>
-                    <option value="bicycle">Bicycle Accident</option>
-                    <option value="truck">Truck Accident</option>
-                    <option value="slip">Slip and Fall</option>
-                    <option value="workplace">Workplace Injury</option>
-                    <option value="wrongful_death">Wrongful Death</option>
+                    <option value="">Choose one</option>
+                    <option value="car">Car</option>
+                    <option value="motorcycle">Motorcycle</option>
+                    <option value="bicycle">Bicycle</option>
+                    <option value="truck">Truck</option>
+                    <option value="slip">Slip and fall</option>
+                    <option value="workplace">Workplace</option>
                     <option value="other">Other</option>
                 </select>
             </div>
-            
-            <div class="form-group">
-                <label class="form-label">Did you or the injured person receive hospital care?</label>
-                <div class="form-radio-group">
-                    <label><input type="radio" name="hospital_care" value="yes" required> Yes</label>
-                    <label><input type="radio" name="hospital_care" value="no" required> No</label>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label">What type of medical care was received? (Check all that apply)</label>
-                <div class="form-checkbox-group">
-                    <div class="form-checkbox">
-                        <input type="checkbox" name="care_type[]" value="doctor">
-                        <label>Doctor/Emergency Visit</label>
-                    </div>
-                    <div class="form-checkbox">
-                        <input type="checkbox" name="care_type[]" value="hospitalization">
-                        <label>Hospitalization</label>
-                    </div>
-                    <div class="form-checkbox">
-                        <input type="checkbox" name="care_type[]" value="surgery">
-                        <label>Surgery</label>
-                    </div>
-                    <div class="form-checkbox">
-                        <input type="checkbox" name="care_type[]" value="other">
-                        <label>Other</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label">When did the accident occur?</label>
-                <select class="form-select" name="accident_date" required>
-                    <option value="">Select an option</option>
-                    <option value="today">Today</option>
-                    <option value="this_week">This Week</option>
-                    <option value="this_month">This Month</option>
-                    <option value="1-3_months">1-3 Months Ago</option>
-                    <option value="3-6_months">3-6 Months Ago</option>
-                    <option value="6-12_months">6-12 Months Ago</option>
-                    <option value="over_12_months">Over 12 Months Ago</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label">First Name *</label>
-                <input type="text" class="form-input" name="first_name" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label">Last Name *</label>
-                <input type="text" class="form-input" name="last_name" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label">Email Address *</label>
-                <input type="email" class="form-input" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label">Phone Number *</label>
-                <input type="tel" class="form-input" name="phone" required>
-            </div>
-            
+
             <div class="form-group">
                 <div class="form-checkbox">
                     <input type="checkbox" name="text_consent" id="text_consent">
-                    <label for="text_consent">I agree to receive text messages. Message and data rates may apply. Reply STOP to opt out.</label>
+                    <label for="text_consent">OK to text me. Reply STOP to opt out.</label>
                 </div>
             </div>
-            
+
             <button type="submit" class="btn-submit">Get Help Now</button>
         </form>
     </div>
