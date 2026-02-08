@@ -2225,6 +2225,7 @@
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_autoresponse" value="Thank you — we received your request. Our legal team will contact you shortly.">
                     <input type="hidden" name="_next" value="https://insideraccidentlawyers.vercel.app/thank-you.html">
+                    <input type="hidden" name="_url" value="https://insideraccidentlawyers.vercel.app/">
                     <div class="form-group">
                         <label class="form-label">Are you, your victim, or are you on behalf of a friend/family member?</label>
                         <select class="form-select" name="relationship" required>
@@ -2452,6 +2453,43 @@ document.addEventListener('DOMContentLoaded',function(){
       var v=e.target.value.replace(/\D/g,'');
       if(v.length>=6){ e.target.value='('+v.slice(0,3)+') '+v.slice(3,6)+'-'+v.slice(6,10); }
       else if(v.length>=3){ e.target.value='('+v.slice(0,3)+') '+v.slice(3); }
+    });
+  }
+  var caseForm=document.getElementById('case-evaluation-form');
+  if(caseForm){
+    caseForm.addEventListener('submit',function(e){
+      e.preventDefault();
+      var form=this;
+      var btn=form.querySelector('button[type="submit"]');
+      if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
+      var data={};
+      var els=form.querySelectorAll('input, select, textarea');
+      for(var i=0;i<els.length;i++){
+        var el=els[i];
+        var n=el.name;
+        if(!n||n.indexOf('_')===0) continue;
+        if(el.type==='radio'||el.type==='checkbox'){
+          if(!el.checked) continue;
+          if(n.indexOf('[]')!==-1){
+            var key=n.replace('[]','');
+            if(!data[key]) data[key]=[];
+            data[key].push(el.value);
+          } else data[n]=el.value;
+        } else data[n]=el.value;
+      }
+      data._subject=form.querySelector('input[name="_subject"]').value;
+      data._template=form.querySelector('input[name="_template"]').value;
+      data._captcha=form.querySelector('input[name="_captcha"]').value;
+      fetch('https://formsubmit.co/ajax/ial.leads.2024@gmail.com',{
+        method:'POST',
+        headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+        body: JSON.stringify(data)
+      }).then(function(r){ return r.json(); }).then(function(){
+        window.location.href='https://insideraccidentlawyers.vercel.app/thank-you.html';
+      }).catch(function(){
+        if(btn){ btn.disabled=false; btn.textContent='Get My Free Review'; }
+        form.submit();
+      });
     });
   }
   var statsEl=document.getElementById('lp-stats');
