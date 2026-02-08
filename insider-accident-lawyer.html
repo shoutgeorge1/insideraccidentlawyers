@@ -325,6 +325,9 @@
             font-weight: 600;
             letter-spacing: 0.4px;
         }
+        .trust-bar-overlay {
+            margin-top: 24px;
+        }
         @media (max-width: 768px) {
             .see-through-bar .see-through-inner {
                 border-radius: 16px;
@@ -649,6 +652,45 @@
             .trust-badge-img {
                 height: 60px !important;
                 max-width: 120px;
+            }
+        }
+        .lp-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto 32px;
+            padding: 0 20px;
+        }
+        .lp-stat-item {
+            text-align: center;
+            padding: 20px 12px;
+            background: var(--brand-white);
+            border-radius: var(--card-radius);
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(1, 54, 108, 0.08);
+        }
+        .lp-stat-item .lp-stat-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+        .lp-stat-item .lp-stat-label {
+            font-size: 0.9rem;
+            color: var(--brand-gray-700);
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .lp-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                margin-bottom: 24px;
+            }
+            .lp-stat-item .lp-stat-value {
+                font-size: 1.25rem;
             }
         }
         .attorney-bio-content {
@@ -1240,7 +1282,7 @@
                     </nav>
                 </div>
                 <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-                    <div class="header-phone" data-callrail-phone="844-467-4335">Call: <a href="tel:844-467-4335" style="color: var(--brand-blue); text-decoration: none;">844-467-4335</a></div>
+                    <div class="header-phone" data-callrail-phone="844-467-4335">Call: <a href="tel:844-467-4335" style="color: var(--brand-blue); text-decoration: none;">844-467-4335</a> <span style="font-size: 0.9em; color: var(--brand-gray-600); margin-left: 8px;">| Hablamos Español</span></div>
                     <a href="tel:844-467-4335" class="btn-secondary" data-callrail-phone="844-467-4335" style="padding: 10px 20px; font-size: 16px;">Free Case Review</a>
                 </div>
             </div>
@@ -1305,6 +1347,13 @@
 
     <section class="trust-badges-section">
         <div class="trust-badges-container">
+            <div class="lp-stats">
+                <div class="lp-stat-item"><span class="lp-stat-value">$100,000,000+</span><span class="lp-stat-label">Won for Clients</span></div>
+                <div class="lp-stat-item"><span class="lp-stat-value">5,000+ Cases</span><span class="lp-stat-label">Won for Clients</span></div>
+                <div class="lp-stat-item"><span class="lp-stat-value">120+ Years</span><span class="lp-stat-label">Experience Among Our Attorneys</span></div>
+                <div class="lp-stat-item"><span class="lp-stat-value">Harvard Law</span><span class="lp-stat-label">Certified in Valuations</span></div>
+            </div>
+            <p class="lead-text" style="text-align: center; margin-bottom: 20px; font-weight: 600; color: var(--color_1);">Former insurance attorneys who know how to get you maximum compensation.</p>
             <div class="trust-badges-headline">Trusted & Recognized By</div>
             <div class="trust-badges-row">
                 <img src="images/la/trust-badge-1.webp" alt="Trust Badge" class="trust-badge-img">
@@ -1578,7 +1627,7 @@
                 <h2 class="cta-heading" style="text-align: center;">Get Your Free Case Evaluation in <span>2 Minutes</span></h2>
                 <p style="text-align: center; font-size: 18px; color: var(--brand-gray-700); margin-bottom: 32px;">Answer a few quick questions and an experienced personal injury attorney will review your case at no cost.</p>
                 <form action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST" id="case-evaluation-form">
-                    <input type="hidden" name="_next" value="https://ial-lp-car-accident.vercel.app/thank-you.html">
+                    <input type="hidden" name="_next" value="https://insideraccidentlawyers.vercel.app/thank-you.html">
                     <input type="hidden" name="_cc" value="john@insiderlawyers.com">
                     <input type="hidden" name="_subject" value="New Lead - Personal Injury Case Evaluation">
                     <input type="hidden" name="_template" value="table">
@@ -1770,7 +1819,7 @@
                     <h3>Contact Us</h3>
                     <p>Call Now for a Free Consultation</p>
                     <div class="footer-phone" data-callrail-phone="844-467-4335"><a href="tel:844-467-4335" style="color: var(--brand-white); text-decoration: none;">844-467-4335</a></div>
-                    <p>Available 24/7</p>
+                    <p>Available 24/7 · Hablamos Español</p>
                     <p style="margin-top: 8px;">No Fee Unless We Win</p>
                 </div>
                 <div class="footer-section">
