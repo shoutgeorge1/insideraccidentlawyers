@@ -750,8 +750,8 @@
         }
         .accident-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
             margin-bottom: 32px;
             max-width: 1000px;
             margin-left: auto;
@@ -759,25 +759,25 @@
         }
         .accident-item {
             background: var(--brand-white);
-            padding: 28px 32px;
-            border-radius: var(--card-radius);
+            padding: 26px 28px;
+            border-radius: 14px;
             border-left: 5px solid var(--brand-blue);
             box-shadow: var(--card-shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
             display: flex;
             align-items: center;
             gap: 20px;
             text-align: left;
         }
         .accident-item:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--card-shadow-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
             border-left-color: var(--brand-accent-yellow);
         }
         .accident-icon {
-            width: 48px;
-            height: 48px;
-            min-width: 48px;
+            width: 68px;
+            height: 68px;
+            min-width: 68px;
             background: linear-gradient(135deg, var(--brand-blue), var(--brand-navy));
             border-radius: 50%;
             display: flex;
@@ -785,16 +785,32 @@
             justify-content: center;
             color: var(--brand-white);
             font-weight: 700;
-            font-size: 24px;
+            font-size: 28px;
             flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(18, 62, 122, 0.3);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
         }
         .accident-item-text {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 600;
             color: var(--brand-gray-900);
             letter-spacing: -0.01em;
             line-height: 1.4;
+        }
+        @media (max-width: 1024px) {
+            .accident-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .accident-item {
+                padding: 18px;
+            }
+            .accident-icon {
+                width: 52px;
+                height: 52px;
+                min-width: 52px;
+                font-size: 22px;
+            }
         }
         .core-trust {
             background: linear-gradient(135deg, rgba(12, 35, 52, 0.04), rgba(1, 54, 108, 0.03));
@@ -856,7 +872,7 @@
             box-shadow: var(--card-shadow-hover);
         }
         .trust-icon {
-            font-size: 64px;
+            font-size: 88px;
             margin-bottom: 20px;
             filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
             transition: transform 0.3s ease;
