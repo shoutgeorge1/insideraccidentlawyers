@@ -862,6 +862,90 @@
             background: rgba(255, 255, 255, 0.22);
             color: var(--brand-white);
         }
+        .our-attorneys-section.section-with-bg {
+            background: linear-gradient(135deg, rgba(1, 54, 108, 0.55), rgba(12, 35, 52, 0.65));
+            padding: 72px 0 80px;
+        }
+        .our-attorneys-section .section-head {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .our-attorneys-section h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--brand-white);
+        }
+        .our-attorneys-section .section-sub {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            letter-spacing: 0.05em;
+        }
+        .our-attorneys-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .our-attorneys-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 28px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .our-attorneys-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.35);
+        }
+        .our-attorneys-photo-wrap {
+            width: 132px;
+            height: 132px;
+            min-width: 132px;
+            max-width: 132px;
+            flex-shrink: 0;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .our-attorneys-photo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+        .our-attorneys-name {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--brand-white);
+            margin-bottom: 4px;
+        }
+        .our-attorneys-title {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        @media (max-width: 768px) {
+            .our-attorneys-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .our-attorneys-photo-wrap {
+                width: 100px;
+                height: 100px;
+                min-width: 100px;
+                max-width: 100px;
+                margin-bottom: 14px;
+            }
+            .our-attorneys-name { font-size: 15px; }
+        }
         .reviews-section.section-with-bg {
             background: var(--brand-white);
         }
@@ -2230,6 +2314,52 @@
                         <div class="association-badge">Trial Lawyers University</div>
                         <div class="association-badge">The National Trial Lawyer</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-attorneys-section section-with-bg">
+        <div class="container">
+            <div class="section-head">
+                <h2>Our Attorneys</h2>
+                <p class="section-sub">Insider Accident Lawyers</p>
+            </div>
+            <div class="our-attorneys-grid">
+                <div class="our-attorneys-card">
+                    <div class="our-attorneys-photo-wrap"><img src="/images/la/shawn-rokni-attorney.webp" alt="Shawn Rokni" width="132" height="132" loading="lazy"></div>
+                    <div class="our-attorneys-name">Shawn Rokni</div>
+                    <div class="our-attorneys-title">Managing Attorney</div>
+                </div>
+                <div class="our-attorneys-card">
+                    <div class="our-attorneys-photo-wrap"><img src="/images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" width="132" height="132" loading="lazy"></div>
+                    <div class="our-attorneys-name">Harvey Goldhammer</div>
+                    <div class="our-attorneys-title">Senior Litigation Attorney</div>
+                </div>
+                <div class="our-attorneys-card">
+                    <div class="our-attorneys-photo-wrap"><img src="/images/la/nathaniel-clark.png" alt="Nathaniel Clark" width="132" height="132" loading="lazy"></div>
+                    <div class="our-attorneys-name">Nathaniel Clark</div>
+                    <div class="our-attorneys-title">Senior Litigation Attorney</div>
+                </div>
+                <div class="our-attorneys-card">
+                    <div class="our-attorneys-photo-wrap"><img src="/images/la/edward-yim.webp" alt="Edward C. Yim" width="132" height="132" loading="lazy"></div>
+                    <div class="our-attorneys-name">Edward C. Yim</div>
+                    <div class="our-attorneys-title">Senior Litigation Attorney</div>
+                </div>
+                <div class="our-attorneys-card">
+                    <div class="our-attorneys-photo-wrap"><img src="/images/la/steven-salazar.png" alt="Steven Salazar" width="132" height="132" loading="lazy"></div>
+                    <div class="our-attorneys-name">Steven Salazar</div>
+                    <div class="our-attorneys-title">Associate Attorney</div>
+                </div>
+                <div class="our-attorneys-card">
+                    <div class="our-attorneys-photo-wrap"><img src="/images/la/donn-christensen.webp" alt="Donn W. Christensen, Esq." width="132" height="132" loading="lazy"></div>
+                    <div class="our-attorneys-name">Donn W. Christensen, Esq.</div>
+                    <div class="our-attorneys-title">Managing Attorney</div>
+                </div>
+                <div class="our-attorneys-card">
+                    <div class="our-attorneys-photo-wrap"><img src="/images/la/artur-mheryan.webp" alt="Artur Mheryan" width="132" height="132" loading="lazy"></div>
+                    <div class="our-attorneys-name">Artur Mheryan</div>
+                    <div class="our-attorneys-title">Associate Attorney</div>
                 </div>
             </div>
         </div>
