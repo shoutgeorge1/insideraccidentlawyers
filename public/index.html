@@ -563,6 +563,53 @@
             opacity: .9;
             margin-top: 14px;
         }
+        .trust-bar-overlay {
+            margin-top: 24px;
+        }
+        .top-trust-bar {
+            background: rgba(12, 35, 52, 0.5);
+            color: var(--brand-white);
+            padding: 6px 12px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .top-trust-bar .top-trust-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .top-trust-bar .trust-bar-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .top-trust-bar .trust-bar-logo {
+            height: 20px;
+            width: auto;
+            object-fit: contain;
+        }
+        .top-trust-bar .trust-bar-rating {
+            flex-direction: row;
+            align-items: center;
+            gap: 4px;
+            line-height: 1;
+        }
+        .top-trust-bar .trust-bar-text {
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .top-trust-bar .trust-bar-stars {
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+        }
         @media (max-width: 768px) {
             .see-through-bar .see-through-inner {
                 border-radius: 16px;
@@ -1690,6 +1737,24 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8XT5FC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div class="top-trust-bar">
+        <div class="top-trust-inner">
+            <div class="trust-bar-item">
+                <img src="images/la/google-rating.png" alt="Google 4.9 Rating" class="trust-bar-logo">
+                <div class="trust-bar-rating">
+                    <span class="trust-bar-text">4.9</span>
+                    <span class="trust-bar-stars">★★★★★</span>
+                </div>
+            </div>
+            <div class="trust-bar-item">
+                <img src="images/la/yelp-logo.jpg" alt="Yelp 4.8 Rating" class="trust-bar-logo">
+                <div class="trust-bar-rating">
+                    <span class="trust-bar-text">4.8</span>
+                    <span class="trust-bar-stars">★★★★★</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="sticky-header">
         <div class="container">
             <div class="header-content">
@@ -1743,26 +1808,6 @@
                     <img src="images/la/attorney-hero.webp" alt="Shawn and Partners" class="hero-attorney-img">
                 </picture>
                 <p class="hero-attorney-caption" style="margin-top:8px;font-size:14px;color:rgba(255,255,255,0.9);font-weight:500;">Trial Attorneys Serving Los Angeles Accident Victims</p>
-                </div>
-            </div>
-            <div class="see-through-bar trust-bar-overlay trust-bar">
-                <div class="see-through-inner">
-                    <div class="trust-bar-items">
-                        <div class="trust-bar-item">
-                            <img src="images/la/google-rating.png" alt="Google 4.9 Rating" class="trust-bar-logo">
-                            <div class="trust-bar-rating">
-                                <div class="trust-bar-text">4.9</div>
-                                <div class="trust-bar-stars">★★★★★</div>
-                            </div>
-                        </div>
-                        <div class="trust-bar-item">
-                            <img src="images/la/yelp-logo.jpg" alt="Yelp 4.8 Rating" class="trust-bar-logo">
-                            <div class="trust-bar-rating">
-                                <div class="trust-bar-text">4.8</div>
-                                <div class="trust-bar-stars">★★★★★</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
