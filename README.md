@@ -1,6 +1,6 @@
 # Insider Accident Lawyers — Landing Pages
 
-**Live site:** [https://insideraccidentlawyers.vercel.app/](https://insideraccidentlawyers.vercel.app/)
+**Live site:** [https://call.insideraccidentlawyers.com/](https://call.insideraccidentlawyers.com/)
 
 **Repo:** [https://github.com/shoutgeorge1/insideraccidentlawyers](https://github.com/shoutgeorge1/insideraccidentlawyers)
 
