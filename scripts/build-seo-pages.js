@@ -10,7 +10,7 @@ const path = require('path');
 
 const BASE = 'https://ial-rewrite.vercel.app';
 const PUBLIC = path.join(__dirname, '..', 'public');
-const SITE = 'https://call.insideraccidentlawyers.com';
+const SITE = 'https://www.insiderlawyers.com';
 
 const PAGES = [
   { path: '/personal-injury', file: 'personal-injury.txt', related: ['/personal-injury/auto-accidents', '/personal-injury/brain-injuries', '/personal-injury/truck-accidents', '/personal-injury/wrongful-death', '/attorney-referrals'] },

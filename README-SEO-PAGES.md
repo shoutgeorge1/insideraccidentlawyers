@@ -35,3 +35,7 @@ This fetches content from ial-rewrite and generates all pages listed in the scri
 ## Vercel Rewrites
 
 `vercel.json` includes rewrites for all SEO paths. Pages live in `public/<path>/index.html`.
+
+## Live URL
+
+SEO pages are canonical to **https://www.insiderlawyers.com/** (e.g. `/personal-injury`, `/personal-injury/auto-accidents`). Ensure the deployment serving www.insiderlawyers.com uses this repo.
